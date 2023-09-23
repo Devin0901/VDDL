@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="KpopZtation.View.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</head>
+
+<style>
+    span{
+        color:white;
+        font-size: 16px;
+    }
+    a{
+        color:white;
+        font-size: 17px;
+    }
+
+    .allContainer{
+        min-height: 100vh;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+</style>
+
+<body>
+    <div class="allContainer">
+       <form id="form1" runat="server">
+                  <nav class="navbar navbar-default">
+                      <div class="container-fluid">
+                          <div class="navbar-collapse" id="navbarSupportedContent">
+                          <h1 class="navbar-brand" href="#" style="color:#F0A500; font-weight:bold; font-size: 40px; text-decoration:none">VVDL</h1>
+                          <div class="container-fluid navbar-right" style="margin-top: -50px">
+                            <asp:Button ID="btnHome" runat="server" Text="Home" OnClick="btnHome_Click" style="margin-right: 20px;float:right;border-radius:20px; background-color: #F4F4F4; border-color: transparent" />
+                            <asp:Button ID="btnCart" runat="server" Text="Cart" OnClick="btnCart_Click" style="margin-right: 20px;float:right;border-radius:20px; background-color: #F4F4F4; border-color: transparent"  />
+                            <asp:Button ID="btnTransaction" runat="server" Text="Transaction History" OnClick="btnTransaction_Click" style="margin-right: 20px;float:right;border-radius:20px; background-color: #F4F4F4; border-color: transparent" />
+                            <asp:Button ID="btnReport" runat="server" Text="Transaction Report" OnClick="btnReport_Click" style="margin-right: 20px;float:right;border-radius:20px; background-color: #F4F4F4; border-color: transparent" />
+                            <asp:Button ID="btnUpdate" runat="server" Text="Update" OnClick="btnUpdate_Click" style="margin-right: 20px;float:right;border-radius:20px; background-color: #F4F4F4; border-color: transparent"  />
+                            <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click"  style="margin-right: 20px;float:right;border-radius:20px; background-color: #F4F4F4; border-color: transparent" />
+                            <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click"  style="margin-right: 20px;float:right;border-radius:20px; background-color: #F4F4F4; border-color: transparent" />
+                            <asp:Button ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" style="margin-right: 20px;float:right;border-radius:20px; background-color: #F4F4F4; border-color: transparent"  />
+                            <asp:Button ID="btnDelete" runat="server" Text="Delete Account" OnClick="btnDelete_Click" style="margin-right: 20px;float:right;border-radius:20px; background-color: #F4F4F4; border-color: transparent" />
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                            </div>
+                            </div>
+                        </div>
+                   </nav>
+        </form>
+        <div class="contains" style="background-color:#F0A500">
+            <div class="container">
+                <div class="row">
+                    <div class ="col-md-4">
+                        <h1 style="font-weight:bold; font-size: 40px;color:white; ">VVDL</h1>
+                        <br />
+                        <a>Download the app by clicking the link below:</a>
+                        <br />
+                        <br />
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <asp:Image ID="Image5" runat="server" ImageUrl="~/Assets/Footer1.png" AlternateText="Logo"/>
+                                </div>
+                                <div class="col-md-6">
+                                    <asp:Image ID="Image6" runat="server" ImageUrl="~/Assets/Footer2.png" AlternateText="Logo"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h1 style="font-size: 20px; color: white;">Pages</h1>
+                        <br />
+                        <h3 style="font-size: 15px; color: white">Home</h3>
+                        <br />
+                        <h3 style="font-size: 15px; color: white">Cart</h3>
+                        <br />
+                        <h3 style="font-size: 15px; color: white">History</h3>
+                    </div>
+                    <div class="col-md-4">
+                        <h1 style="font-size: 20px; color: white;">Contact</h1>
+                        <br />
+                        <asp:Image ID="Image7" runat="server" ImageUrl="~/Assets/Footer3.png" AlternateText="Logo"/>
+                        <span>081213102</span>
+                        <br />
+                        <br />
+                        <asp:Image ID="Image8" runat="server" ImageUrl="~/Assets/Footer4.png" AlternateText="Logo"/>
+                        <span>Reborn@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+</body>
+</html>
